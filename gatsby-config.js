@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Jeonghye Blog",
+    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Jeonghye Blog',
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-typescript'],
 };
