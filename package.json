@@ -12,12 +12,17 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "npm run typecheck"
   },
   "dependencies": {
     "gatsby": "^4.4.0",
     "gatsby-plugin-typescript": "^4.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
   }
 }
