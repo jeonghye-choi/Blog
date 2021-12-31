@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: 'https://www.yourdomain.tld',
     title: 'Jeonghye Blog',
   },
-  plugins: ['gatsby-plugin-typescript'],
+  plugins: ['gatsby-plugin-typescript', 'gatsby-plugin-root-import'],
 };
