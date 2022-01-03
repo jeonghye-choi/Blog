@@ -1,7 +1,106 @@
+import Layout from 'components/Layout';
+import 'pages/styles/index.scss';
 import React from 'react';
 
-const IndexPage = () => {
-  return <p>Index page</p>;
-};
+function IndexPage() {
+  return (
+    <Layout>
+      <div className="index-page">
+        <div className="title-wrap">
+          <div className="title">Hello, I&apos;m Jeonghye</div>
+          <p>
+            A front-end web developer studying at Pusan National University. I
+            always try to draw growth and challenge for Today better than
+            yesterday. living ~~~~
+          </p>
+        </div>
+
+        <div className="subtitle">
+          <span className="highlight">Skills</span>
+        </div>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+        <article>
+          <b>Languages</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Framework & Libraries</b>
+          <p>TypeScript | JavaScript | C++ | Python</p>
+          <b>Tools</b>
+          <p>Git | GitHub | GitLab | VSCode</p>
+        </article>
+      </div>
+    </Layout>
+  );
+}
 
 export default IndexPage;

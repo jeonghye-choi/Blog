@@ -1,0 +1,95 @@
+@import 'utils/variables.scss';
+
+.layout-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  nav {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: solid 1px #ededed;
+
+    @media screen and (min-width: $break-m) {
+      padding: 16px 24px;
+    }
+
+    .nav-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      width: 170px;
+    }
+    .nav-item-wrap {
+      display: flex;
+      flex-direction: row;
+      width: 40vw;
+      justify-content: space-between;
+      font-size: 0.9rem;
+
+      @media screen and (min-width: $break-l) {
+        width: 20vw;
+        font-size: 1rem;
+      }
+
+      .nav-item {
+        padding: 1px 0;
+      }
+
+      .nav-item.pocus {
+        border-bottom: 2px solid $main-color;
+      }
+    }
+  }
+  main {
+    flex: 1;
+  }
+  footer {
+    height: 30px;
+    padding: 12px 0;
+    // border-top: solid 1px #ededed;
+    color: #999;
+    text-align: center;
+    font-size: 0.5rem;
+
+    @media screen and (min-width: $break-l) {
+      font-size: 0.8rem;
+    }
+  }
+
+  #top {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 2rem;
+    margin-bottom: 2.2rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+    @media screen and (max-width: $break-s) {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    svg {
+      font-size: 2rem;
+      margin: 0;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

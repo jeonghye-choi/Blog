@@ -1,0 +1,42 @@
+@import 'utils/variables.scss';
+
+.index-page {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $break-m) {
+    padding: 24px;
+  }
+
+  .title-wrap {
+    margin: 50px 0;
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  article {
+    b {
+      font-weight: 500;
+    }
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0 20px;
+    }
+  }
+}

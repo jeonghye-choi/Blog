@@ -18,12 +18,20 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "gatsby": "^4.4.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-sass": "^5.4.0",
     "gatsby-plugin-typescript": "^4.4.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.45.2"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^8.5.0",
