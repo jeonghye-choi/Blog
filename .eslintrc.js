@@ -2,35 +2,35 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
-  parser: '@typescript-eslint/parser',
-  extends: [
-    'eslint:recommended',
-    'react-app',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react',
-  ],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   env: {
     browser: true,
     node: true,
     es6: true,
   },
-  plugins: ['@typescript-eslint', 'prettier', 'react'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    tsconfigRootDir: __dirname,
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
+  plugins: ['@typescript-eslint', 'prettier', 'react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+
   rules: {
     'react/prop-types': 'off',
   },
