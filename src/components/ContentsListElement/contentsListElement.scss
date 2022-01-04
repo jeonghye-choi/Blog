@@ -1,0 +1,43 @@
+.contents-list-element {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 23px 0;
+  border-bottom: 1px solid #ededed;
+
+  .contents-preview-wrap {
+    flex: 1;
+
+    .tag {
+      font-size: 0.8rem;
+    }
+    .title {
+      margin: 6px 0 9px;
+    }
+    .contents {
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 8px;
+
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 2; /* 라인수 */
+      // -webkit-box-orient: vertical;
+    }
+    .date {
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  img {
+    width: 94px;
+    height: 94px;
+    margin-left: 19px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
