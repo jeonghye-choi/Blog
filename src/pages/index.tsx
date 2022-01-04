@@ -1,6 +1,6 @@
 import Layout from 'components/Layout';
-import 'pages/styles/index.scss';
 import React from 'react';
+import 'styles/index.scss';
 
 function IndexPage() {
   return (
