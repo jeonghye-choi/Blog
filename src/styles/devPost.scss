@@ -1,0 +1,79 @@
+@import 'utils/variables.scss';
+
+.dev-post {
+  display: flex;
+  flex-direction: column;
+
+  .main-image {
+    width: 100vw;
+    height: 35vw;
+    max-height: 300px;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post-info {
+    padding: 0 20px;
+    margin-bottom: 33px;
+
+    @media screen and (min-width: $break-m) {
+      padding: 0 24px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: #555;
+      margin-right: 7px;
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin: 6px 0;
+    }
+    .date {
+      font-size: 0.8rem;
+      color: #bbb;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .post-contents {
+    padding: 0 20px;
+    color: #555;
+    margin-bottom: 100px;
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    h4 {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    h5 {
+      font-size: 0.6rem;
+      font-weight: 400;
+    }
+    p {
+      margin: 0;
+    }
+
+    @media screen and (min-width: $break-m) {
+      padding: 0 24px;
+    }
+  }
+}
