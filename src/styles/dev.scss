@@ -29,31 +29,30 @@
   }
 
   // NOTE: category-upper Type
-  .category-upper {
+  .category {
     margin-right: 20px;
     margin-bottom: 7px;
-    :hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 
-  //NOTE: category-lower Type
-  .category-lower-wrap {
+  //
+  .tag-wrap {
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
     margin-bottom: 50px;
 
-    .category-lower {
+    .tag {
       padding: 2px 15px;
       border-radius: 50px;
       border: 1px solid #ededed;
       margin-right: 7px;
       margin-bottom: 7px;
+      cursor: pointer;
     }
 
-    .category-lower.all,
-    .category-lower.selected {
+    .tag.all,
+    .tag.selected {
       background-color: #000;
       color: #fff;
     }

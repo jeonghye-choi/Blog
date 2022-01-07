@@ -1,6 +1,5 @@
 import ContentsListElement from 'components/ContentsListElement';
 import Layout from 'components/Layout';
-import TagList from 'components/TagList';
 import { graphql } from 'gatsby';
 import React, { useMemo, useState } from 'react';
 import dummyImg2 from 'static/image/dummyImg2.jpg';
@@ -26,7 +25,7 @@ export type CategoryType = {
 
 function DevPage({ data }: any) {
   const [categorySelected, setCategorySelected] = useState('Front');
-  const [tagSelected, setTagSelected] = useState('React');
+  const [tagSelected, setTagSelected] = useState('전체');
   const categoryGroup = data.allMdx.group;
   const [tagGroup, setTagGroup] = useState<JSX.Element[]>([]);
   const [currentPostList, setCurrentPostList] = useState<JSX.Element[]>([]);
@@ -41,12 +40,13 @@ function DevPage({ data }: any) {
 
   useMemo(() => {
     tagGroup.map((tag: any) => {
-      if (tag.fieldValue === tagSelected) {
+      if (tagSelected === '전체') {
+        setCurrentPostList(tag.nodes);
+      } else if (tag.fieldValue === tagSelected) {
         setCurrentPostList(tag.nodes);
       }
     });
-    console.log('currentPostList', currentPostList);
-  }, [tagGroup]);
+  }, [tagGroup, tagSelected]);
 
   return (
     <Layout>
@@ -59,11 +59,12 @@ function DevPage({ data }: any) {
                 key={category.fieldValue + index}
                 className={
                   category.fieldValue === categorySelected
-                    ? 'category-upper underline'
-                    : 'category-upper'
+                    ? 'category underline'
+                    : 'category'
                 }
                 onClick={() => {
                   setCategorySelected(category.fieldValue);
+                  setTagSelected('전체');
                 }}>
                 {category.fieldValue}
               </div>
@@ -71,14 +72,32 @@ function DevPage({ data }: any) {
           })}
         </section>
 
-        <section className="category-lower-wrap">
-          <TagList />
+        <section className="tag-wrap">
+          <div
+            className="tag all"
+            onClick={() => {
+              setTagSelected('전체');
+            }}>
+            전체
+          </div>
+          {tagGroup.map((tag: any, index) => {
+            return (
+              <div
+                className={
+                  tag.fieldValue === tagSelected ? 'tag selected' : 'tag'
+                }
+                key={index}
+                onClick={() => {
+                  setTagSelected(tag.fieldValue);
+                }}>
+                {tag.fieldValue}
+              </div>
+            );
+          })}
         </section>
 
         <section className="contents-list">
           {currentPostList.map((post: any) => {
-            console.log('post', post.frontmatter);
-            console.log(typeof post);
             return (
               <ContentsListElement
                 key={post.id}
