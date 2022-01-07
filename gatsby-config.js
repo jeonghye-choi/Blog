@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://jeonghyeblog.gatsbyjs.io/',
     title: 'Jeonghye Blog',
   },
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-root-import',
     'gatsby-plugin-sass',
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -14,5 +15,13 @@ module.exports = {
         display: 'swap',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: `_posts`,
+        path: `${__dirname}/_posts`,
+      },
+    },
+    'gatsby-plugin-mdx',
   ],
 };

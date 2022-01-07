@@ -29,32 +29,34 @@
   }
 
   // NOTE: category-upper Type
-  .category-upper {
+  .category {
     margin-right: 20px;
     margin-bottom: 7px;
+    cursor: pointer;
   }
 
-  // NOTE: category-lower Type
-  // .category-lower-wrap {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   align-content: stretch;
-  //   margin-bottom: 50px;
+  //
+  .tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    margin-bottom: 50px;
 
-  //   .category-lower {
-  //     padding: 2px 15px;
-  //     border-radius: 50px;
-  //     border: 1px solid #ededed;
-  //     margin-right: 7px;
-  //     margin-bottom: 7px;
-  //   }
+    .tag {
+      padding: 2px 15px;
+      border-radius: 50px;
+      border: 1px solid #ededed;
+      margin-right: 7px;
+      margin-bottom: 7px;
+      cursor: pointer;
+    }
 
-  //   .category-lower.all,
-  //   .category-lower.selected {
-  //     background-color: #000;
-  //     color: #fff;
-  //   }
-  // }
+    .tag.all,
+    .tag.selected {
+      background-color: #000;
+      color: #fff;
+    }
+  }
 
   // NOTE: contents-list
   .contents-list {
