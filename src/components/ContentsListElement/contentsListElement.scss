@@ -10,9 +10,12 @@
 
     .tag {
       font-size: 0.8rem;
+      color: #555;
+      margin-right: 7px;
     }
     .title {
-      margin: 6px 0 9px;
+      font-size: 1.3rem;
+      margin: 6px 0 6px;
     }
     .contents {
       font-size: 0.8rem;
@@ -27,8 +30,8 @@
       // -webkit-box-orient: vertical;
     }
     .date {
-      font-size: 0.8rem;
-      color: #555;
+      font-size: 0.6rem;
+      color: #bbb;
       letter-spacing: 1.5px;
     }
   }
