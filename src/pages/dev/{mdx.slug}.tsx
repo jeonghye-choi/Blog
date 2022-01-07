@@ -1,16 +1,17 @@
 import Layout from 'components/Layout';
 import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import dummyImg2 from 'static/image/dummyImg2.jpg';
 import 'styles/devPost.scss';
 
 const DevPost = ({ data }: any) => {
+  const main_image: any | undefined = getImage(data.mdx.frontmatter.main_image);
   return (
     <Layout>
       <div className="dev-post">
         <article className="main-image">
-          <img src={dummyImg2} />
+          <GatsbyImage image={main_image} alt="" />
         </article>
         <article className="post-info">
           {data.mdx.frontmatter.tags.map((tag: string, index: number) => (
@@ -36,6 +37,11 @@ export const query = graphql`
         title
         date(formatString: "YYYY년 MM월 DD일")
         tags
+        main_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
       body
     }
