@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './contentsListElement.scss';
 
 interface ContentsType {
-  tags: string;
+  tags: string[];
   title: string;
   contents: string;
   date: string;
