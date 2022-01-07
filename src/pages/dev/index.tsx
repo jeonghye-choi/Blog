@@ -105,6 +105,7 @@ function DevPage({ data }: any) {
                 title={post.frontmatter.title}
                 contents={post.excerpt}
                 date={post.frontmatter.date}
+                slug={post.slug}
                 img={dummyImg2}
               />
             );
