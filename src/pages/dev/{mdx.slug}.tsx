@@ -1,5 +1,6 @@
 import Layout from 'components/Layout';
 import { graphql } from 'gatsby';
+import { Disqus } from 'gatsby-plugin-disqus';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
@@ -7,25 +8,38 @@ import React from 'react';
 import './devPost.scss';
 
 const DevPost = ({ data }: any) => {
-  const main_image: any | undefined = getImage(data.mdx.frontmatter.main_image);
+  const postData = data.mdx;
+  const main_image: any | undefined = getImage(postData.frontmatter.main_image);
+
+  const disqusConfig = {
+    url: `http://localhost:8000/dev/${postData.slug}`,
+    identifier: postData.id,
+    title: 'title',
+  };
+
   return (
     <Layout>
-      <div className="dev-post">
+      {main_image === undefined || (
         <article className="main-image">
           <GatsbyImage image={main_image} alt="" />
         </article>
+      )}
+      <div className="dev-post">
         <article className="post-info">
-          {data.mdx.frontmatter.tags.map((tag: string, index: number) => (
-            <span key={index + tag} className="tag highlight">
-              {tag}
-            </span>
-          ))}
-          <div className="title">{data.mdx.frontmatter.title}</div>
-          <div className="date">{data.mdx.frontmatter.date}</div>
+          <div className="title">{postData.frontmatter.title}</div>
+          <div className="date">{postData.frontmatter.date}</div>
         </article>
         <article className="post-contents">
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <MDXRenderer>{postData.body}</MDXRenderer>
         </article>
+        <article className="tag-box">
+          {postData.frontmatter.tags.map((tag: string, index: number) => (
+            <span key={index + tag} className="tag">
+              #{tag}
+            </span>
+          ))}
+        </article>
+        <Disqus config={disqusConfig} />
       </div>
     </Layout>
   );
@@ -44,7 +58,9 @@ export const query = graphql`
           }
         }
       }
+      id
       body
+      slug
     }
   }
 `;
