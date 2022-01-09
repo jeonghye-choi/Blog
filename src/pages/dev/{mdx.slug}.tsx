@@ -3,7 +3,8 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import 'styles/devPost.scss';
+
+import './devPost.scss';
 
 const DevPost = ({ data }: any) => {
   const main_image: any | undefined = getImage(data.mdx.frontmatter.main_image);
