@@ -3,7 +3,8 @@ import Layout from 'components/Layout';
 import { graphql } from 'gatsby';
 import React, { useMemo, useState } from 'react';
 import dummyImg2 from 'static/image/dummyImg2.jpg';
-import 'styles/dev.scss';
+
+import './dev.scss';
 
 export type Post = {
   node: {

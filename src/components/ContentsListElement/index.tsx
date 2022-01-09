@@ -28,7 +28,7 @@ function ContentsListElement({
         <div className="contents-preview-wrap">
           {tags.map((tag: string, index: number) => (
             <span key={index + tag} className="tag highlight">
-              {tag}
+              #{tag}
             </span>
           ))}
           <div className="title">{title}</div>

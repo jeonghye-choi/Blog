@@ -3,7 +3,7 @@ import { FontAwesomeIcon as FAIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby';
 import { throttle } from 'lodash';
 import React, { useCallback, useEffect, useState } from 'react';
-import 'utils/global.scss';
+import 'styles/global.scss';
 
 import './layout.scss';
 
