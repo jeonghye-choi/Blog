@@ -38,13 +38,15 @@ function ContentsListElement({
           <div className="contents">{contents}</div>
           <div className="date">{date}</div>
         </div>
-        <GatsbyImage
-          image={main_image}
-          alt=""
-          style={{
-            display: isImg ? 'block' : 'none',
-          }}
-        />
+        <div className="contents-list-image">
+          <GatsbyImage
+            image={main_image}
+            alt=""
+            style={{
+              display: isImg ? 'block' : 'none',
+            }}
+          />
+        </div>
       </article>
     </Link>
   );

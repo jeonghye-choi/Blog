@@ -36,11 +36,14 @@
     }
   }
 
-  img {
-    width: 94px;
-    height: 94px;
+  .contents-list-image {
     margin-left: 19px;
-    object-fit: cover;
-    object-position: top;
+
+    img {
+      width: 94px;
+      height: 94px;
+      object-fit: contain;
+      object-position: top;
+    }
   }
 }
