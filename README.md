@@ -1,54 +1,38 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  Jeonghye's Blog
 </h1>
 
-## 🚀 Quick start
+You can visit my blog site with one click on:
 
-1.  **Create a Gatsby site.**
+[https://jeonghye.blog/](https://jeonghye.blog/)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<br/>
+<br/>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
+## 🌿 About
+
+1.  **Use Gatsby**
+
+    Use the Gatsby CLI to create this blog site
+
+    ```bash
     npm init gatsby
     ```
 
-2.  **Start developing.**
+2.  **With Typescript**
 
-    Navigate into your new site’s directory and start it up.
+    - Easy to define Prop types
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+      : Make the code much easier to read and use.
 
-3.  **Open the code and start customizing!**
+    - Support static type checking and intellisense in general
 
-    Your site is now running at http://localhost:8000!
+3.  **MDX**
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    MDX allows me to write JSX inside of Markdown.
 
-4.  **Learn more**
+    This makes Markdown contents have style using css or sass.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+4.  **Gatsby Cloud**
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+    Deploy this site with Gatsby Cloud

@@ -2,7 +2,6 @@ import ContentsListElement from 'components/ContentsListElement';
 import Layout from 'components/Layout';
 import { graphql } from 'gatsby';
 import React, { useMemo, useState } from 'react';
-import dummyImg2 from 'static/image/dummyImg2.jpg';
 
 import './dev.scss';
 
@@ -75,7 +74,7 @@ function DevPage({ data }: any) {
 
         <section className="tag-wrap">
           <div
-            className="tag all"
+            className={tagSelected === '전체' ? 'tag selected' : 'tag all'}
             onClick={() => {
               setTagSelected('전체');
             }}>
@@ -107,7 +106,7 @@ function DevPage({ data }: any) {
                 contents={post.excerpt}
                 date={post.frontmatter.date}
                 slug={post.slug}
-                img={dummyImg2}
+                mainImage={post.frontmatter.main_image}
               />
             );
           })}
@@ -128,6 +127,11 @@ export const query = graphql`
               date(formatString: "YYYY.MM.DD")
               tags
               title
+              main_image {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
             }
             id
             slug
