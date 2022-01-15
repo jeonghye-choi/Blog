@@ -35,12 +35,12 @@ function Layout(props: LayoutPropsType) {
           <div className="nav-name">Jeonghye-Choi</div>
         </Link>
         <div className="nav-item-wrap">
-          <Link to="/write">
+          {/* <Link to="/write">
             <div className="nav-item pocus">Write</div>
           </Link>
           <Link to="/draw">
             <div className="nav-item">Draw</div>
-          </Link>
+          </Link> */}
           <Link to="/log">
             <div className="nav-item">Log</div>
           </Link>
