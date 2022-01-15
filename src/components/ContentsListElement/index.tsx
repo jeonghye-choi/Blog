@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 
 import './contentsListElement.scss';
@@ -9,7 +10,7 @@ interface ContentsType {
   contents: string;
   date: string;
   slug: string;
-  img: string;
+  mainImage: IGatsbyImageData;
 }
 
 function ContentsListElement({
@@ -18,9 +19,11 @@ function ContentsListElement({
   contents,
   date,
   slug,
-  img,
+  mainImage,
 }: ContentsType) {
   const [isImg, setIsImg] = useState(true);
+
+  const main_image: any | undefined = getImage(mainImage);
 
   return (
     <Link to={slug}>
@@ -35,11 +38,12 @@ function ContentsListElement({
           <div className="contents">{contents}</div>
           <div className="date">{date}</div>
         </div>
-        <img
+        <GatsbyImage
+          image={main_image}
+          alt=""
           style={{
             display: isImg ? 'block' : 'none',
           }}
-          src={img}
         />
       </article>
     </Link>
