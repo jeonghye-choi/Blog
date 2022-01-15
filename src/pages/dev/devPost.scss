@@ -30,7 +30,7 @@
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: 1px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
     .date {
       font-size: 0.8rem;
@@ -44,16 +44,19 @@
     margin-bottom: 150px;
 
     h1 {
-      font-size: 1.4rem;
+      font-size: 2rem;
       font-weight: 500;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 500;
+      margin-block-start: 3em;
     }
     h3 {
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-block-start: 2em;
+      margin-block-end: 0.5em;
     }
     h4 {
       font-size: 0.8rem;
@@ -65,6 +68,46 @@
     }
     p {
       margin: 0;
+    }
+    pre {
+      background-color: #ececec;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    code {
+      background-color: #ececec;
+      padding: 3px 5px;
+      margin-right: 2px;
+      border-radius: 5px;
+      color: #727934;
+    }
+    blockquote {
+      font-style: italic;
+      background-color: #f5f5f5;
+
+      border-radius: 5px;
+      padding: 5px 20px;
+      margin: 1em 0px;
+    }
+    strong {
+      font-weight: 500;
+    }
+    a {
+      text-decoration: underline;
+    }
+    a :hover {
+      color: #bcc756;
+    }
+    ul {
+      padding-inline-start: 20px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    ol {
+      margin-block-start: 5px;
+      padding-inline-start: 20px;
     }
   }
   .tag-box {

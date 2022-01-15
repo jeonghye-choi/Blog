@@ -26,12 +26,13 @@
     .nav-item-wrap {
       display: flex;
       flex-direction: row;
-      width: 40vw;
+      width: 10vw;
       justify-content: space-between;
       font-size: 0.9rem;
+      min-width: 80px;
 
       @media screen and (min-width: $break-l) {
-        width: 20vw;
+        width: 8vw;
         font-size: 1rem;
       }
 
