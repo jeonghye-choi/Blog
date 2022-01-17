@@ -10,8 +10,8 @@ function IndexPage() {
           <div className="title">Hello, I&apos;m Jeonghye</div>
           <p>
             A front-end web developer studying at Pusan National University. I
-            always try to draw growth and challenge for Today better than
-            yesterday. living ~~~~
+            always try to draw growth and challenge for being a better today
+            than yesterday.
           </p>
         </div>
 
@@ -22,82 +22,14 @@ function IndexPage() {
           <b>Languages</b>
           <p>TypeScript | JavaScript | C++ | Python</p>
           <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
+          <p>React | Vue | Django | React-Native</p>
           <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
+          <p>Git | GitHub | GitLab | VSCode | Insomnia</p>
         </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
-        <article>
-          <b>Languages</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Framework & Libraries</b>
-          <p>TypeScript | JavaScript | C++ | Python</p>
-          <b>Tools</b>
-          <p>Git | GitHub | GitLab | VSCode</p>
-        </article>
+        <div className="subtitle">
+          <span className="highlight">Projects</span>
+        </div>
+        <article></article>
       </div>
     </Layout>
   );
