@@ -22,7 +22,25 @@ module.exports = {
         path: `${__dirname}/_posts`,
       },
     },
-    'gatsby-plugin-mdx',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+              showCaptions: ['title'],
+              wrapperStyle: `
+                margin-bottom: 50px;
+                margin-top: 50px;
+                box-shadow: #bbb 0px 0px 10px 1px;`,
+            },
+          },
+        ],
+      },
+    },
+
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
