@@ -1,11 +1,12 @@
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon as FAIcon } from '@fortawesome/react-fontawesome';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { throttle } from 'lodash';
-import React, { useCallback, useEffect, useState } from 'react';
-import GithubIcon from 'static/image/icons/github.svg';
-import InstagramIcon from 'static/image/icons/instagram.svg';
-import LinkedInIcon from 'static/image/icons/linkedin.svg';
+import * as React from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import GithubIcon from 'static/image/icons/github-icon.svg';
+import InstagramIcon from 'static/image/icons/instagram-icon.svg';
+import LinkedInIcon from 'static/image/icons/linkedin-icon.svg';
 import 'styles/global.scss';
 
 import './layout.scss';
@@ -34,7 +35,9 @@ function Layout(props: LayoutPropsType) {
   return (
     <div className="layout-wrap">
       <header>
-        <div className="logo">Jeonghye</div>
+        <Link to={'/'}>
+          <div className="logo">Jeonghye</div>
+        </Link>
         <div className="sns-links">
           <a href="">
             <img src={GithubIcon} />
@@ -51,9 +54,15 @@ function Layout(props: LayoutPropsType) {
         </div>
       </header>
       <nav>
-        <ul>Dev</ul>
-        <ul>Log</ul>
-        <ul>Write</ul>
+        <Link to={'/dev'}>
+          <ul className="clicked">Dev</ul>
+        </Link>
+        <Link to={'/log'}>
+          <ul>Log</ul>
+        </Link>
+        <Link to={'/write'}>
+          <ul>Write</ul>
+        </Link>
       </nav>
       <main>{children}</main>
       <div
