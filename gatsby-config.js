@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jeonghyeblog.gatsbyjs.io/',
+    siteUrl: 'https://jeonghye.blog/',
     title: 'Jeonghye Blog',
   },
   plugins: [

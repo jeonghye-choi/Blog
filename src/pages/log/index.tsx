@@ -2,9 +2,9 @@ import Layout from 'components/Layout';
 import * as React from 'react';
 import 'styles/page.scss';
 
-function DevPage() {
+function LogPage() {
   return (
-    <Layout page="Dev">
+    <Layout page="Log">
       <div className="page">
         <article className="categories">
           <section className="category">
@@ -14,19 +14,6 @@ function DevPage() {
             <li>Git/Github</li>
             <li>Activity</li>
             <li>Project</li>
-          </section>
-          <section className="subcategory">
-            <li className="all clicked">All</li>
-            <li className="clicked">JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
           </section>
         </article>
         <article className="contents">
@@ -55,32 +42,5 @@ function DevPage() {
     </Layout>
   );
 }
-// export const query = graphql`
-//   query {
-//     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-//       group(field: frontmatter___category) {
-//         fieldValue
-//         group(field: frontmatter___tags) {
-//           fieldValue
-//           nodes {
-//             frontmatter {
-//               date(formatString: "YYYY.MM.DD")
-//               tags
-//               title
-//               main_image {
-//                 childImageSharp {
-//                   gatsbyImageData
-//                 }
-//               }
-//             }
-//             id
-//             slug
-//             excerpt(truncate: true, pruneLength: 30)
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
-export default DevPage;
+export default LogPage;
