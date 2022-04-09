@@ -1,12 +1,10 @@
 import Layout from 'components/Layout';
 import * as React from 'react';
-
-import './dev.scss';
+import 'styles/page.scss';
 
 function DevPage() {
   return (
-    <Layout>
-      <div className="dev-page">
+      <div className="page">
         <article className="categories">
           <section className="category">
             <li className="clicked">Frontend</li>
