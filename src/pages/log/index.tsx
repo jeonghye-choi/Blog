@@ -4,7 +4,7 @@ import 'styles/page.scss';
 
 function LogPage() {
   return (
-    <Layout>
+    <Layout page="Log">
       <div className="page">
         <article className="categories">
           <section className="category">

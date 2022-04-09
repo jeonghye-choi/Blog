@@ -4,6 +4,7 @@ import 'styles/page.scss';
 
 function DevPage() {
   return (
+    <Layout page="Dev">
       <div className="page">
         <article className="categories">
           <section className="category">

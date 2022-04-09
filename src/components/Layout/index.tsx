@@ -13,10 +13,11 @@ import './layout.scss';
 
 interface LayoutPropsType {
   children: React.ReactNode;
+  page: string;
 }
 
 function Layout(props: LayoutPropsType) {
-  const { children } = props;
+  const { children, page } = props;
   const [isTop, setIsTop] = useState(true);
 
   const setTop = useCallback(
@@ -55,13 +56,13 @@ function Layout(props: LayoutPropsType) {
       </header>
       <nav>
         <Link to={'/dev'}>
-          <ul className="clicked">Dev</ul>
+          <ul className={page === 'Dev' ? 'clicked' : ''}>Dev</ul>
         </Link>
         <Link to={'/log'}>
-          <ul>Log</ul>
+          <ul className={page === 'Log' ? 'clicked' : ''}>Log</ul>
         </Link>
         <Link to={'/write'}>
-          <ul>Write</ul>
+          <ul className={page === 'Write' ? 'clicked' : ''}>Write</ul>
         </Link>
       </nav>
       <main>{children}</main>

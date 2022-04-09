@@ -4,7 +4,7 @@ import 'styles/page.scss';
 
 function WritePage() {
   return (
-    <Layout>
+    <Layout page="Write">
       <div className="page">
         <article className="contents">
           <div className="content">
