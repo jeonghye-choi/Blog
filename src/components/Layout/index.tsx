@@ -6,7 +6,7 @@ import * as React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import GithubIcon from 'static/image/icons/github-icon.svg';
 import InstagramIcon from 'static/image/icons/instagram-icon.svg';
-import LinkedInIcon from 'static/image/icons/linkedin-icon.svg';
+import LinkedInIcon from 'static/image/icons/linkedIn-icon.svg';
 import 'styles/global.scss';
 
 import './layout.scss';
