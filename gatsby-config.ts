@@ -63,5 +63,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 };
