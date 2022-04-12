@@ -1,0 +1,50 @@
+@import 'utils/variables.scss';
+
+.tag {
+  font-family: 'Nunito Sans';
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: #bbbbbb;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+
+  li {
+    list-style: none;
+    border: 1px solid #bbbbbb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 3px 12px 2px;
+    margin-right: 12px;
+    margin-bottom: 7px;
+
+    &::before {
+      content: '#';
+      display: inline-block;
+      margin-right: 2px;
+    }
+    &:first-child::before {
+      content: none;
+    }
+
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+      font-weight: 600;
+      border-width: 1.5px;
+      cursor: pointer;
+    }
+    &.clicked {
+      color: $main-color;
+      border-color: $main-color;
+      font-weight: 600;
+      border-width: 1.5px;
+    }
+    &.all.clicked {
+      background: #333333;
+      color: #fff;
+      border-color: #333;
+    }
+  }
+}
