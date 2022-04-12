@@ -64,5 +64,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://jeonghye.blog`,
+        stripQueryString: true,
+      },
+    },
   ],
 };
