@@ -40,18 +40,20 @@ function Layout(props: LayoutPropsType) {
           <div className="logo">Jeonghye</div>
         </Link>
         <div className="sns-links">
-          <a href="">
+          <a href="https://github.com/jeonghye-choi">
             <img src={GithubIcon} />
           </a>
-          <a href="" className="linkedin">
+          <a
+            href="https://www.linkedin.com/in/jeonghye-choi/"
+            className="linkedin">
             <img src={LinkedInIcon} />
-            <a href="">
-              <img src={InstagramIcon} />
-            </a>
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/jihyenanum/">
+            <img src={InstagramIcon} />
+          </a>
+          {/* <a href="">
             <span>Portfolio</span>
-          </a>
+          </a> */}
         </div>
       </header>
       <nav>
