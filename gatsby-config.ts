@@ -53,6 +53,15 @@ module.exports = {
         shortname: `jeonghye`,
       },
     },
+
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://jeonghye.blog',
+        sitemap: 'https://jeonghye.blog/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 };
