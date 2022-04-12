@@ -2,8 +2,10 @@ import path from 'path';
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jeonghye.blog/',
     title: 'Jeonghye Blog',
+    author: 'Jeonghye Choi',
+    description: 'This blog is powered by gatsby',
+    siteUrl: 'https://jeonghye.blog',
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -51,5 +53,6 @@ module.exports = {
         shortname: `jeonghye`,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 };
