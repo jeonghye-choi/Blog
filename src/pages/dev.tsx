@@ -1,9 +1,15 @@
+import Seo from 'components/Seo';
 import Dev from 'containers/Dev';
 import * as React from 'react';
 import 'styles/page.scss';
 
 function DevPage() {
-  return <Dev />;
+  return (
+    <>
+      <Seo title="Dev" />
+      <Dev />
+    </>
+  );
 }
 // export const query = graphql`
 //   query {

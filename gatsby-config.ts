@@ -2,8 +2,10 @@ import path from 'path';
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jeonghye.blog/',
     title: 'Jeonghye Blog',
+    author: 'Jeonghye Choi',
+    description: 'This blog is powered by gatsby',
+    siteUrl: 'https://jeonghye.blog',
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -49,6 +51,24 @@ module.exports = {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `jeonghye`,
+      },
+    },
+
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://jeonghye.blog',
+        sitemap: 'https://jeonghye.blog/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://jeonghye.blog`,
+        stripQueryString: true,
       },
     },
   ],
