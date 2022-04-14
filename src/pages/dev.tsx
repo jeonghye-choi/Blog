@@ -1,3 +1,4 @@
+import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import Dev from 'containers/Dev';
 import * as React from 'react';
@@ -5,38 +6,14 @@ import 'styles/page.scss';
 
 function DevPage() {
   return (
-    <>
-      <Seo title="Dev" />
+    <Layout page="Dev">
+      <Seo
+        title="정혜의 개발 저장소 | Dev"
+        description="배우고 이해한 것들을 정리하는 저장소입니다."
+      />
       <Dev />
-    </>
+    </Layout>
   );
 }
-// export const query = graphql`
-//   query {
-//     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-//       group(field: frontmatter___category) {
-//         fieldValue
-//         group(field: frontmatter___tags) {
-//           fieldValue
-//           nodes {
-//             frontmatter {
-//               date(formatString: "YYYY.MM.DD")
-//               tags
-//               title
-//               main_image {
-//                 childImageSharp {
-//                   gatsbyImageData
-//                 }
-//               }
-//             }
-//             id
-//             slug
-//             excerpt(truncate: true, pruneLength: 30)
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export default DevPage;
