@@ -7,10 +7,10 @@ import LogContent from './LogContent';
 
 function Log() {
   return (
-    <Layout page="Log">
+    <>
       <Tag />
       <LogContent />
-    </Layout>
+    </>
   );
 }
 
