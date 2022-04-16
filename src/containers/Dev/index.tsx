@@ -8,7 +8,8 @@ import DevContent from './DevContent';
 
 function Dev() {
   const postActions = usePostsActions();
-  const devPosts = postActions.getPosts().posts.edges;
+  const devPosts = postActions.getPosts();
+
 
   return (
     <>

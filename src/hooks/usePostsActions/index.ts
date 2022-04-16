@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 function usePostsActions() {
   function getPosts(isCategories = true, isTags = true) {
-    const posts = useStaticQuery<PostsType>(
+    const data = useStaticQuery<PostsType>(
       graphql`
         query {
           posts: allMdx(
@@ -30,7 +30,7 @@ function usePostsActions() {
       `,
     );
 
-    return posts;
+    return data.posts.edges;
   }
 
   return {
