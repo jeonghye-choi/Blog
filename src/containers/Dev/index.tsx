@@ -47,7 +47,7 @@ function Dev() {
     <>
       <Category selectedCategory={selectedCategory} categories={categories} />
       <Tag />
-      <DevContent posts={devPosts} />
+      <DevContent selectedCategory={selectedCategory} posts={devPosts} />
     </>
   );
 }
