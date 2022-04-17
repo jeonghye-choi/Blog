@@ -85,7 +85,11 @@ function Dev() {
         selectedTag={selectedTag}
         tags={tags}
       />
-      <DevContent selectedCategory={selectedCategory} posts={devPosts} />
+      <DevContent
+        selectedCategory={selectedCategory}
+        selectedTag={selectedTag}
+        posts={devPosts}
+      />
     </>
   );
 }

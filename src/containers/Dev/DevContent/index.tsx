@@ -8,24 +8,26 @@ import './devContent.scss';
 interface DevContentProps {
   posts: PostType[];
   selectedCategory: string;
+  selectedTag: string;
 }
 
 function DevContent(props: DevContentProps) {
-  const { posts, selectedCategory } = props;
+  const { posts, selectedCategory, selectedTag } = props;
 
   const filteredPosts = useMemo(
     () =>
       posts.filter(
         ({
           node: {
-            frontmatter: { categories },
+            frontmatter: { categories, tags },
           },
         }: PostType) =>
-          selectedCategory !== 'All'
+          (selectedCategory !== 'All'
             ? categories?.includes(selectedCategory)
-            : true,
+            : true) &&
+          (selectedTag !== 'All' ? tags?.includes(selectedTag) : true),
       ),
-    [selectedCategory],
+    [selectedCategory, selectedTag],
   );
 
   return (
