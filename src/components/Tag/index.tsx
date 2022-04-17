@@ -1,21 +1,28 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 
 import './tag.scss';
 
-function Tag() {
+interface TagProps {
+  selectedCategory: string;
+  selectedTag: string;
+  tags: string[];
+}
+
+function Tag(props: TagProps) {
+  const { selectedCategory, selectedTag, tags } = props;
+
   return (
     <section className="tag">
-      <li className="all clicked">All</li>
-      <li className="clicked">JavaScript</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
+      <Link to={`?category=${selectedCategory}`}>All</Link>
+      {tags.map((tag, index) => (
+        <Link
+          to={`?category=${selectedCategory}&tag=${tag}`}
+          className={selectedTag === tag ? 'selected' : ''}
+          key={index}>
+          {tag}
+        </Link>
+      ))}
     </section>
   );
 }

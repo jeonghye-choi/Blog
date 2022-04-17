@@ -27,7 +27,6 @@ function Layout(props: LayoutPropsType) {
 
   useEffect(() => {
     document.addEventListener('scroll', setTop);
-    console.log('is scrolling');
     return () => {
       document.removeEventListener('scroll', setTop);
     };

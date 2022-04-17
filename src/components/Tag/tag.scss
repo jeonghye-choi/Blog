@@ -10,8 +10,7 @@
   flex-wrap: wrap;
   margin-bottom: 44px;
 
-  li {
-    list-style: none;
+  a {
     border: 1px solid #bbbbbb;
     box-sizing: border-box;
     border-radius: 5px;
@@ -27,6 +26,9 @@
     &:first-child::before {
       content: none;
     }
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     &:hover {
       color: $main-color;
@@ -35,16 +37,11 @@
       border-width: 1.5px;
       cursor: pointer;
     }
-    &.clicked {
+    &.selected {
       color: $main-color;
       border-color: $main-color;
       font-weight: 600;
       border-width: 1.5px;
-    }
-    &.all.clicked {
-      background: #333333;
-      color: #fff;
-      border-color: #333;
     }
   }
 }
