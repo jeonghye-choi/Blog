@@ -13,7 +13,11 @@ function Dev() {
   const postActions = usePostsActions();
   const devPosts = postActions.getPosts();
 
-  const parsed: ParsedQuery<string> = queryString.parse(window.location.search);
+  let parsed = {} as ParsedQuery<string>;
+  if (typeof window !== 'undefined') {
+    parsed = queryString.parse(window.location.search);
+  }
+
   const selectedCategory =
     typeof parsed.category !== 'string' || !parsed.category
       ? 'All'
