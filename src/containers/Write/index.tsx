@@ -7,7 +7,7 @@ import WriteContent from './WriteContent';
 function Write() {
   return (
     <>
-      <Tag />
+      <Tag selectedCategory="" selectedTag="" tags={[]} />
       <WriteContent />
     </>
   );

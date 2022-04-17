@@ -8,7 +8,7 @@ import LogContent from './LogContent';
 function Log() {
   return (
     <>
-      <Tag />
+      <Tag selectedCategory="" selectedTag="" tags={[]} />
       <LogContent />
     </>
   );
