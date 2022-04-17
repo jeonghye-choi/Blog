@@ -22,6 +22,9 @@ function Dev() {
     typeof parsed.category !== 'string' || !parsed.category
       ? 'All'
       : parsed.category;
+  const selectedTag =
+    typeof parsed.tag !== 'string' || !parsed.tag ? 'All' : parsed.tag;
+
   const categories = useMemo(
     () =>
       devPosts.reduce(
@@ -46,11 +49,42 @@ function Dev() {
       ),
     [],
   );
+  const tags = useMemo(
+    () =>
+      devPosts.reduce(
+        (
+          list: string[],
+          {
+            node: {
+              frontmatter: { categories, tags },
+            },
+          }: PostType,
+        ) => {
+          if (tags && categories) {
+            tags.forEach(tag => {
+              if (
+                !list.includes(tag) &&
+                categories.includes(selectedCategory)
+              ) {
+                list.push(tag);
+              }
+            });
+          }
+          return list;
+        },
+        [],
+      ),
+    [selectedCategory],
+  );
 
   return (
     <>
       <Category selectedCategory={selectedCategory} categories={categories} />
-      <Tag />
+      <Tag
+        selectedCategory={selectedCategory}
+        selectedTag={selectedTag}
+        tags={tags}
+      />
       <DevContent selectedCategory={selectedCategory} posts={devPosts} />
     </>
   );
