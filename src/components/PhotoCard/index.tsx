@@ -5,7 +5,6 @@ import './photocard.scss';
 
 function PhotoCard(props: PostFrontmatterType) {
   const { title, date, tags, categories, thumbnail } = props;
-  console.log('PhotoCard', props);
 
   return (
     <div className="card">
