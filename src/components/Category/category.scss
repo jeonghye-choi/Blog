@@ -9,10 +9,12 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
 
-  li {
-    list-style: none;
+  a {
     margin-right: 20px;
     margin-bottom: 5px;
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     @media screen and (max-width: $break-l) {
       margin-right: 24px;
@@ -25,7 +27,7 @@
       color: #333333;
       cursor: pointer;
     }
-    &.clicked {
+    &.selected {
       color: #333333;
     }
   }

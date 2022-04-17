@@ -1,16 +1,24 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 
 import './category.scss';
 
-function Category() {
+interface CategoryProps {
+  selectedCategory: string;
+  categories: string[];
+}
+
+function Category({ selectedCategory, categories }: CategoryProps) {
   return (
     <section className="category">
-      <li className="clicked">Frontend</li>
-      <li>Backend</li>
-      <li>CS</li>
-      <li>Git/Github</li>
-      <li>Activity</li>
-      <li>Project</li>
+      {categories.map((category, index) => (
+        <Link
+          to={`?category=${category}`}
+          className={selectedCategory === category ? 'selected' : ''}
+          key={index}>
+          {category}
+        </Link>
+      ))}
     </section>
   );
 }
