@@ -2,7 +2,7 @@ import { PostsType } from 'CreatePostPagesQuery';
 import { graphql, useStaticQuery } from 'gatsby';
 
 function usePostsActions() {
-  function getPosts(isCategories = true, isTags = true) {
+  function getPosts() {
     const data = useStaticQuery<PostsType>(
       graphql`
         query {
@@ -15,6 +15,7 @@ function usePostsActions() {
             edges {
               node {
                 id
+                slug
                 frontmatter {
                   title
                   date(formatString: "YYYY.MM.DD")

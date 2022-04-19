@@ -32,9 +32,11 @@ function DevContent(props: DevContentProps) {
 
   return (
     <section className="content">
-      {filteredPosts.map(({ node: { id, frontmatter } }: PostType) => (
-        <PhotoCard key={id} {...frontmatter} />
-      ))}
+      {filteredPosts.map(
+        ({ node: { id, frontmatter, slug } }: PostsEdgeType) => (
+          <PhotoCard key={id} id={id} link={slug} {...frontmatter} />
+        ),
+      )}
     </section>
   );
 }
