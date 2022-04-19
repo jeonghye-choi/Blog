@@ -8,6 +8,13 @@ declare module 'CreatePostPagesQuery' {
   }
 
   export interface PostType {
+    id: string;
+    frontmatter: PostFrontmatterType;
+    body: string;
+    slug: string;
+  }
+
+  export interface PostsEdgeType {
     node: {
       id: string;
       frontmatter: PostFrontmatterType;
@@ -17,7 +24,7 @@ declare module 'CreatePostPagesQuery' {
 
   export interface PostsType {
     posts: {
-      edges: PostType[];
+      edges: PostsEdgeType[];
     };
   }
 }

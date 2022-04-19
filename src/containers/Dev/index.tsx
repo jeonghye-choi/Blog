@@ -1,4 +1,4 @@
-import { PostType } from 'CreatePostPagesQuery';
+import { PostsEdgeType } from 'CreatePostPagesQuery';
 import Category from 'components/Category';
 import Tag from 'components/Tag';
 import usePostsActions from 'hooks/usePostsActions';
@@ -34,7 +34,7 @@ function Dev() {
             node: {
               frontmatter: { categories },
             },
-          }: PostType,
+          }: PostsEdgeType,
         ) => {
           if (categories) {
             categories.forEach(category => {
@@ -58,7 +58,7 @@ function Dev() {
             node: {
               frontmatter: { categories, tags },
             },
-          }: PostType,
+          }: PostsEdgeType,
         ) => {
           if (tags && categories) {
             tags.forEach(tag => {

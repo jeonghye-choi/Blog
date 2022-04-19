@@ -1,4 +1,4 @@
-import { PostType } from 'CreatePostPagesQuery';
+import { PostsEdgeType } from 'CreatePostPagesQuery';
 import PhotoCard from 'components/PhotoCard';
 import * as React from 'react';
 import { useMemo } from 'react';
@@ -6,7 +6,7 @@ import { useMemo } from 'react';
 import './devContent.scss';
 
 interface DevContentProps {
-  posts: PostType[];
+  posts: PostsEdgeType[];
   selectedCategory: string;
   selectedTag: string;
 }
@@ -21,7 +21,7 @@ function DevContent(props: DevContentProps) {
           node: {
             frontmatter: { categories, tags },
           },
-        }: PostType) =>
+        }: PostsEdgeType) =>
           (selectedCategory !== 'All'
             ? categories?.includes(selectedCategory)
             : true) &&
