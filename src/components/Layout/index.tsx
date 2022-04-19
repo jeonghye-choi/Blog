@@ -13,7 +13,7 @@ import './layout.scss';
 
 interface LayoutPropsType {
   children: React.ReactNode;
-  page: string;
+  page?: string;
 }
 
 function Layout(props: LayoutPropsType) {
