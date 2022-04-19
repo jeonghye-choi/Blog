@@ -4,14 +4,12 @@ declare module 'CreatePostPagesQuery' {
     date: string;
     tags?: string[];
     categories?: string[];
-    thumbnail: string;
+    thumbnail?: string;
   }
 
   export interface PostType {
-    id: string;
     frontmatter: PostFrontmatterType;
     body: string;
-    slug: string;
   }
 
   export interface PostsEdgeType {
