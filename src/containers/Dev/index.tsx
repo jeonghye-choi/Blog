@@ -14,6 +14,7 @@ function Dev() {
   const posts = postActions.getPosts();
 
   let parsed = {} as ParsedQuery<string>;
+  const page = 'dev';
   if (typeof window !== 'undefined') {
     parsed = queryString.parse(window.location.search);
   }
@@ -33,12 +34,13 @@ function Dev() {
           {
             node: {
               frontmatter: { categories },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
           if (categories) {
             categories.forEach(category => {
-              if (!list.includes(category)) {
+              if (!list.includes(category) && page === slug.split('/')[0]) {
                 list.push(category);
               }
             });
@@ -57,6 +59,7 @@ function Dev() {
           {
             node: {
               frontmatter: { categories, tags },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
@@ -64,7 +67,8 @@ function Dev() {
             tags.forEach(tag => {
               if (
                 !list.includes(tag) &&
-                categories.includes(selectedCategory)
+                categories.includes(selectedCategory) &&
+                page === slug.split('/')[0]
               ) {
                 list.push(tag);
               }
@@ -89,6 +93,7 @@ function Dev() {
         selectedCategory={selectedCategory}
         selectedTag={selectedTag}
         posts={posts}
+        page={page}
       />
     </>
   );
