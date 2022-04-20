@@ -4,25 +4,43 @@ import * as React from 'react';
 import './tag.scss';
 
 interface TagProps {
-  selectedCategory?: string;
+  selectedCategory?: string | undefined;
   selectedTag: string;
   tags: string[];
 }
 
 function Tag(props: TagProps) {
-  const { selectedTag, tags, ...selectedCategory } = props;
+  const { selectedTag, tags } = props;
+  const selectedCategory = props.selectedCategory && props.selectedCategory;
 
   return (
     <section className="tag">
-      <Link to={`?category=${selectedCategory}`}>All</Link>
-      {tags.map((tag, index) => (
-        <Link
-          to={`?category=${selectedCategory}&tag=${tag}`}
-          className={selectedTag === tag ? 'selected' : ''}
-          key={index}>
-          {tag}
-        </Link>
-      ))}
+      {selectedCategory ? (
+        <Link to={`?category=${selectedCategory}`}>All</Link>
+      ) : (
+        <Link to={``}>All</Link>
+      )}
+      {tags.map((tag, index) => {
+        if (selectedCategory) {
+          return (
+            <Link
+              to={`?category=${selectedCategory}&tag=${tag}`}
+              className={selectedTag === tag ? 'selected' : ''}
+              key={index}>
+              {tag}
+            </Link>
+          );
+        } else {
+          return (
+            <Link
+              to={`?tag=${tag}`}
+              className={selectedTag === tag ? 'selected' : ''}
+              key={index}>
+              {tag}
+            </Link>
+          );
+        }
+      })}
     </section>
   );
 }
