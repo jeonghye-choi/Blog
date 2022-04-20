@@ -13,12 +13,9 @@ function Log() {
   const posts = postActions.getPosts();
 
   let parsed = {} as ParsedQuery<string>;
-  let path: string;
+  const page = 'log';
   if (typeof window !== 'undefined') {
     parsed = queryString.parse(window.location.search);
-    path = window.location.pathname;
-
-    console.log('path', path);
   }
 
   const selectedTag =
@@ -32,12 +29,13 @@ function Log() {
           {
             node: {
               frontmatter: { tags },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
           if (tags) {
             tags.forEach(tag => {
-              if (!list.includes(tag)) {
+              if (!list.includes(tag) && page === slug.split('/')[0]) {
                 list.push(tag);
               }
             });
@@ -52,7 +50,7 @@ function Log() {
   return (
     <>
       <Tag selectedTag={selectedTag} tags={tags} />
-      <LogContent selectedTag={selectedTag} posts={posts} />
+      <LogContent selectedTag={selectedTag} posts={posts} page={page} />
     </>
   );
 }

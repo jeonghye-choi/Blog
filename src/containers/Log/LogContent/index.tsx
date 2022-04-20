@@ -6,12 +6,13 @@ import { useMemo } from 'react';
 import './logContent.scss';
 
 interface LogContentProps {
+  page: string;
   posts: PostsEdgeType[];
   selectedTag: string;
 }
 
 function LogContent(props: LogContentProps) {
-  const { posts, selectedTag } = props;
+  const { page, posts, selectedTag } = props;
 
   const filteredPosts = useMemo(
     () =>
@@ -19,9 +20,12 @@ function LogContent(props: LogContentProps) {
         ({
           node: {
             frontmatter: { tags },
+            slug,
           },
         }: PostsEdgeType) =>
-          selectedTag != 'All' ? tags?.includes(selectedTag) : true,
+          selectedTag != 'All'
+            ? tags?.includes(selectedTag)
+            : true && page === slug.split('/')[0],
       ),
     [selectedTag],
   );
