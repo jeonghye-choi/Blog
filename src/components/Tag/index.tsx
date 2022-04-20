@@ -16,9 +16,15 @@ function Tag(props: TagProps) {
   return (
     <section className="tag">
       {selectedCategory ? (
-        <Link to={`?category=${selectedCategory}`}>All</Link>
+        <Link
+          to={`?category=${selectedCategory}`}
+          className={selectedTag === 'All' ? 'selected' : ''}>
+          All
+        </Link>
       ) : (
-        <Link to={``}>All</Link>
+        <Link to={``} className={selectedTag === 'All' ? 'selected' : ''}>
+          All
+        </Link>
       )}
       {tags.map((tag, index) => {
         if (selectedCategory) {
