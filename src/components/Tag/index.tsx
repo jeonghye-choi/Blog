@@ -4,13 +4,13 @@ import * as React from 'react';
 import './tag.scss';
 
 interface TagProps {
-  selectedCategory: string;
+  selectedCategory?: string;
   selectedTag: string;
   tags: string[];
 }
 
 function Tag(props: TagProps) {
-  const { selectedCategory, selectedTag, tags } = props;
+  const { selectedTag, tags, ...selectedCategory } = props;
 
   return (
     <section className="tag">
