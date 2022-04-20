@@ -11,7 +11,7 @@ import DevContent from './DevContent';
 
 function Dev() {
   const postActions = usePostsActions();
-  const devPosts = postActions.getPosts();
+  const posts = postActions.getPosts();
 
   let parsed = {} as ParsedQuery<string>;
   if (typeof window !== 'undefined') {
@@ -27,7 +27,7 @@ function Dev() {
 
   const categories = useMemo(
     () =>
-      devPosts.reduce(
+      posts.reduce(
         (
           list: string[],
           {
@@ -51,7 +51,7 @@ function Dev() {
   );
   const tags = useMemo(
     () =>
-      devPosts.reduce(
+      posts.reduce(
         (
           list: string[],
           {
@@ -88,7 +88,7 @@ function Dev() {
       <DevContent
         selectedCategory={selectedCategory}
         selectedTag={selectedTag}
-        posts={devPosts}
+        posts={posts}
       />
     </>
   );
