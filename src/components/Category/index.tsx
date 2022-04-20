@@ -11,6 +11,9 @@ interface CategoryProps {
 function Category({ selectedCategory, categories }: CategoryProps) {
   return (
     <section className="category">
+      <Link to={``} className={selectedCategory === 'All' ? 'selected' : ''}>
+        All
+      </Link>
       {categories.map((category, index) => (
         <Link
           to={`?category=${category}`}

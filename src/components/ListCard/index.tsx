@@ -1,14 +1,23 @@
+import { PostFrontmatterType } from 'CreatePostPagesQuery';
+import { Link } from 'gatsby';
 import * as React from 'react';
 
 import './listCard.scss';
 
-function ListCard() {
+interface ListCardProps extends PostFrontmatterType {
+  id: string;
+  link: string;
+}
+
+function ListCard(props: ListCardProps) {
+  const { id, title, date, tags, categories, thumbnail, link } = props;
+
   return (
-    <div className="card">
+    <Link to={`/${link}`} className="card">
       <img src="" />
-      <div className="title">title이 들어갈 자리</div>
-      <div className="date">2022.04.08</div>
-    </div>
+      <div className="title">{title}</div>
+      <div className="date">{date}</div>
+    </Link>
   );
 }
 

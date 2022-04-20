@@ -6,13 +6,14 @@ import { useMemo } from 'react';
 import './devContent.scss';
 
 interface DevContentProps {
+  page: string;
   posts: PostsEdgeType[];
   selectedCategory: string;
   selectedTag: string;
 }
 
 function DevContent(props: DevContentProps) {
-  const { posts, selectedCategory, selectedTag } = props;
+  const { page, posts, selectedCategory, selectedTag } = props;
 
   const filteredPosts = useMemo(
     () =>
@@ -20,12 +21,14 @@ function DevContent(props: DevContentProps) {
         ({
           node: {
             frontmatter: { categories, tags },
+            slug,
           },
         }: PostsEdgeType) =>
           (selectedCategory !== 'All'
             ? categories?.includes(selectedCategory)
             : true) &&
-          (selectedTag !== 'All' ? tags?.includes(selectedTag) : true),
+          (selectedTag !== 'All' ? tags?.includes(selectedTag) : true) &&
+          page === slug.split('/')[0],
       ),
     [selectedCategory, selectedTag],
   );

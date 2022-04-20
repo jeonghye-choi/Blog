@@ -11,9 +11,10 @@ import DevContent from './DevContent';
 
 function Dev() {
   const postActions = usePostsActions();
-  const devPosts = postActions.getPosts();
+  const posts = postActions.getPosts();
 
   let parsed = {} as ParsedQuery<string>;
+  const page = 'dev';
   if (typeof window !== 'undefined') {
     parsed = queryString.parse(window.location.search);
   }
@@ -27,18 +28,19 @@ function Dev() {
 
   const categories = useMemo(
     () =>
-      devPosts.reduce(
+      posts.reduce(
         (
           list: string[],
           {
             node: {
               frontmatter: { categories },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
           if (categories) {
             categories.forEach(category => {
-              if (!list.includes(category)) {
+              if (!list.includes(category) && page === slug.split('/')[0]) {
                 list.push(category);
               }
             });
@@ -51,12 +53,13 @@ function Dev() {
   );
   const tags = useMemo(
     () =>
-      devPosts.reduce(
+      posts.reduce(
         (
           list: string[],
           {
             node: {
               frontmatter: { categories, tags },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
@@ -64,7 +67,14 @@ function Dev() {
             tags.forEach(tag => {
               if (
                 !list.includes(tag) &&
-                categories.includes(selectedCategory)
+                selectedCategory === 'All' &&
+                page === slug.split('/')[0]
+              ) {
+                list.push(tag);
+              } else if (
+                !list.includes(tag) &&
+                categories.includes(selectedCategory) &&
+                page === slug.split('/')[0]
               ) {
                 list.push(tag);
               }
@@ -77,6 +87,8 @@ function Dev() {
     [selectedCategory],
   );
 
+  console.log('tags = ', tags);
+
   return (
     <>
       <Category selectedCategory={selectedCategory} categories={categories} />
@@ -88,7 +100,8 @@ function Dev() {
       <DevContent
         selectedCategory={selectedCategory}
         selectedTag={selectedTag}
-        posts={devPosts}
+        posts={posts}
+        page={page}
       />
     </>
   );
