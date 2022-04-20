@@ -11,13 +11,12 @@ import WriteContent from './WriteContent';
 function Write() {
   const postActions = usePostsActions();
   const posts = postActions.getPosts();
+
   let parsed = {} as ParsedQuery<string>;
-  let path: string;
+  const page = 'write';
+
   if (typeof window !== 'undefined') {
     parsed = queryString.parse(window.location.search);
-    path = window.location.pathname;
-
-    console.log('path', path);
   }
 
   const selectedTag =
@@ -31,12 +30,13 @@ function Write() {
           {
             node: {
               frontmatter: { tags },
+              slug,
             },
           }: PostsEdgeType,
         ) => {
           if (tags) {
             tags.forEach(tag => {
-              if (!list.includes(tag)) {
+              if (!list.includes(tag) && page === slug.split('/')[0]) {
                 list.push(tag);
               }
             });
@@ -51,7 +51,7 @@ function Write() {
   return (
     <>
       <Tag selectedTag={selectedTag} tags={tags} />
-      <WriteContent selectedTag={selectedTag} posts={posts} />
+      <WriteContent selectedTag={selectedTag} posts={posts} page={page} />
     </>
   );
 }

@@ -6,12 +6,13 @@ import { useMemo } from 'react';
 import './writeContent.scss';
 
 interface WriteContentProps {
+  page: string;
   posts: PostsEdgeType[];
   selectedTag: string;
 }
 
 function WriteContent(props: WriteContentProps) {
-  const { posts, selectedTag } = props;
+  const { page, posts, selectedTag } = props;
 
   const filteredPosts = useMemo(
     () =>
@@ -19,9 +20,12 @@ function WriteContent(props: WriteContentProps) {
         ({
           node: {
             frontmatter: { tags },
+            slug,
           },
         }: PostsEdgeType) =>
-          selectedTag != 'All' ? tags?.includes(selectedTag) : true,
+          selectedTag != 'All'
+            ? tags?.includes(selectedTag)
+            : true && page === slug.split('/')[0],
       ),
     [selectedTag],
   );
