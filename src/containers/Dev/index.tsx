@@ -67,6 +67,12 @@ function Dev() {
             tags.forEach(tag => {
               if (
                 !list.includes(tag) &&
+                selectedCategory === 'All' &&
+                page === slug.split('/')[0]
+              ) {
+                list.push(tag);
+              } else if (
+                !list.includes(tag) &&
                 categories.includes(selectedCategory) &&
                 page === slug.split('/')[0]
               ) {
@@ -80,6 +86,8 @@ function Dev() {
       ),
     [selectedCategory],
   );
+
+  console.log('tags = ', tags);
 
   return (
     <>
