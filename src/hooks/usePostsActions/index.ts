@@ -21,7 +21,11 @@ function usePostsActions() {
                   date(formatString: "YYYY.MM.DD")
                   tags
                   categories
-                  thumbnail
+                  thumbnail {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
                 }
                 slug
               }
