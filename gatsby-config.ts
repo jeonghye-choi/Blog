@@ -31,6 +31,29 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: { sh: 'bash' },
+              showLineNumbers: false,
+              numberLines: true,
+              noInlineHighlight: false,
+              // Customize the prompt used in shell output
+              // Values below are default
+              prompt: {
+                user: 'root',
+                host: 'localhost',
+                global: false,
+              },
+              // By default the HTML entities <>&'" are escaped.
+              // Add additional HTML escapes by providing a mapping
+              // of HTML entities and their escape value IE: { '}': '&#123;' }
+              escapeEntities: {},
+            },
+          },
+
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 500,
