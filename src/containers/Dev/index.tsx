@@ -87,8 +87,6 @@ function Dev() {
     [selectedCategory],
   );
 
-  console.log('tags = ', tags);
-
   return (
     <>
       <Category selectedCategory={selectedCategory} categories={categories} />
