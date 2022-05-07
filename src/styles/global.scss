@@ -11,12 +11,23 @@ body {
     color: inherit;
   }
 
-  .highlight {
-    padding: 0 3px 0 0;
-    background: linear-gradient(to top, #55adff 47%, transparent 50%);
+  .gatsby-highlight pre[class*='language-'] {
+    border-radius: 5px;
   }
 
-  bold {
-    font-weight: bold;
+  .gatsby-highlight pre[class*='language-'].line-numbers {
+    & > .line-numbers-rows {
+      padding: 16px;
+      border: none;
+    }
   }
+
+  // .highlight {
+  //   padding: 0 3px 0 0;
+  //   background: linear-gradient(to top, #55adff 47%, transparent 50%);
+  // }
+
+  // bold {
+  //   font-weight: bold;
+  // }
 }
