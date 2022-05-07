@@ -50,9 +50,9 @@ function Layout(props: LayoutPropsType) {
           <a href="https://www.instagram.com/jihyenanum/">
             <img src={InstagramIcon} />
           </a>
-          {/* <a href="">
+          <a href="https://www.notion.so/jeonghyedev/Jeonghye-8d52b0dc4ef046da8886c6b88a3cca86">
             <span>Portfolio</span>
-          </a> */}
+          </a>
         </div>
       </header>
       <nav>
