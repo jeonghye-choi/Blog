@@ -1,15 +1,10 @@
 @import 'utils/variables.scss';
 
-.content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 20px;
+.log-content {
+  display: flex;
+  flex-direction: column;
 
-  @media screen and (max-width: $break-m) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (max-width: $break-s) {
-    grid-template-columns: repeat(1, 1fr);
+  li:nth-child(1) {
+    padding-top: 0;
   }
 }

@@ -31,7 +31,7 @@ function LogContent(props: LogContentProps) {
   );
 
   return (
-    <section className="content">
+    <section className="log-content">
       {filteredPosts.map(
         ({ node: { id, frontmatter, body } }: PostsEdgeType) => (
           <ListCard key={id} id={id} body={body} {...frontmatter} />
