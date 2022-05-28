@@ -31,7 +31,7 @@ function WriteContent(props: WriteContentProps) {
   );
 
   return (
-    <section className="content">
+    <section className="write-content">
       {filteredPosts.map(
         ({ node: { id, frontmatter, slug } }: PostsEdgeType) => (
           <PhotoCard key={id} id={id} link={slug} {...frontmatter} />
