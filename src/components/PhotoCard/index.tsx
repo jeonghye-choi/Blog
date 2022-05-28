@@ -15,7 +15,7 @@ function PhotoCard(props: PhotoCardProps) {
   const thumbnail = getImage(props.thumbnail);
 
   return (
-    <Link to={`/${link}`} className="card">
+    <Link to={`/${link}`} className="photocard">
       {thumbnail && <GatsbyImage image={thumbnail} alt="thumbnail" />}
       <div className="title">{title}</div>
       <div className="date">{date}</div>
