@@ -25,16 +25,16 @@ function LogContent(props: LogContentProps) {
         }: PostsEdgeType) =>
           selectedTag != 'All'
             ? tags?.includes(selectedTag)
-            : true && page === slug.split('/')[0],
+            : true && page === slug?.split('/')[0],
       ),
     [selectedTag],
   );
 
   return (
-    <section className="content">
+    <section className="log-content">
       {filteredPosts.map(
-        ({ node: { id, frontmatter, slug } }: PostsEdgeType) => (
-          <ListCard key={id} id={id} link={slug} {...frontmatter} />
+        ({ node: { id, frontmatter, body } }: PostsEdgeType) => (
+          <ListCard key={id} id={id} body={body} {...frontmatter} />
         ),
       )}
     </section>

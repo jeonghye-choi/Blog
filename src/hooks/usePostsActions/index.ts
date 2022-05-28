@@ -28,6 +28,7 @@ function usePostsActions() {
                   }
                 }
                 slug
+                body
               }
             }
           }
