@@ -59,11 +59,11 @@ function Layout(props: LayoutPropsType) {
         <Link to={'/dev'}>
           <ul className={page === 'Dev' ? 'clicked' : ''}>Dev</ul>
         </Link>
-        <Link to={'/log'}>
-          <ul className={page === 'Log' ? 'clicked' : ''}>Log</ul>
-        </Link>
         <Link to={'/write'}>
           <ul className={page === 'Write' ? 'clicked' : ''}>Write</ul>
+        </Link>
+        <Link to={'/log'}>
+          <ul className={page === 'Log' ? 'clicked' : ''}>Log</ul>
         </Link>
       </nav>
       <main>{children}</main>
