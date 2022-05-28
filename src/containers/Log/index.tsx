@@ -35,7 +35,7 @@ function Log() {
         ) => {
           if (tags) {
             tags.forEach(tag => {
-              if (!list.includes(tag) && page === slug.split('/')[0]) {
+              if (!list.includes(tag) && page === slug?.split('/')[0]) {
                 list.push(tag);
               }
             });

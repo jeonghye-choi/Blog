@@ -17,7 +17,8 @@ declare module 'CreatePostPagesQuery' {
     node: {
       id: string;
       frontmatter: PostFrontmatterType;
-      slug: string;
+      slug?: string;
+      body: string;
     };
   }
 

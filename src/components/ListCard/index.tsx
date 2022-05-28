@@ -7,7 +7,7 @@ import './listCard.scss';
 
 interface ListCardProps extends PostFrontmatterType {
   id: string;
-  link: string;
+  body: string;
 }
 
 function ListCard(props: ListCardProps) {
