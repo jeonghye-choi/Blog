@@ -2,7 +2,6 @@ import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import Post from 'containers/Post';
 import { graphql } from 'gatsby';
-// import usePostsActions from 'hooks/usePostsActions';
 import * as React from 'react';
 import 'styles/page.scss';
 
@@ -26,6 +25,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY.MM.DD")
+        tags
+        categories
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
       body
     }
