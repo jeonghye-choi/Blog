@@ -1,16 +1,46 @@
 import { PostType } from 'CreatePostPagesQuery';
-// import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-// import usePostsActions from 'hooks/usePostsActions';
 import * as React from 'react';
-import 'styles/page.scss';
+
+import './post.scss';
 
 function Post(props: { post: PostType }) {
-  const post = props.post;
+  const { body, frontmatter } = props.post;
+  const { date, title, categories, tags } = frontmatter;
+  const thumbnail = getImage(frontmatter.thumbnail);
 
   return (
     <>
-      <MDXRenderer>{post.body}</MDXRenderer>
+      <section className="post">
+        <div className="post-thumbnail">
+          {thumbnail && <GatsbyImage image={thumbnail} alt="thumbnail" />}
+        </div>
+        <article className="post-header-wrap">
+          <div className="post-category">
+            {categories?.map((category, index) => (
+              <span key={index}>{category}</span>
+            ))}
+          </div>
+          <h1 className="post-title">{title}</h1>
+          <div className="post-desc">
+            <div>
+              Jeonghye (정혜)
+              <span>·</span>
+              {date}
+            </div>
+          </div>
+        </article>
+        <article className="post-body">
+          <MDXRenderer>{body}</MDXRenderer>
+        </article>
+        <hr />
+        <div>
+          {tags?.map((tag, index) => (
+            <span key={index}>{tag}</span>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
