@@ -1,6 +1,6 @@
 import { PostFrontmatterType } from 'CreatePostPagesQuery';
 import { Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as React from 'react';
 
 import './listCard.scss';
@@ -11,15 +11,23 @@ interface ListCardProps extends PostFrontmatterType {
 }
 
 function ListCard(props: ListCardProps) {
-  const { id, title, date, tags, categories, link } = props;
-  const thumbnail = getImage(props.thumbnail);
+  const { id, date, title, body, tags } = props;
 
   return (
-    <Link to={`/${link}`} className="card">
-      {thumbnail && <GatsbyImage image={thumbnail} alt="thumbnail" />}
+    <li className="listcard">
       <div className="title">{title}</div>
       <div className="date">{date}</div>
-    </Link>
+
+      <main className="body">
+        <MDXRenderer>{body}</MDXRenderer>
+      </main>
+
+      <div className="tags">
+        {tags?.map((tag, index) => (
+          <span key={index}>#{tag}</span>
+        ))}
+      </div>
+    </li>
   );
 }
 
