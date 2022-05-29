@@ -3,24 +3,25 @@
 .photocard {
   .gatsby-image-wrapper {
     width: 100%;
+
+    img {
+      background: #c4c4c4;
+      border-radius: 5px;
+      width: 100%;
+      height: 15vw;
+      margin-bottom: 15px;
+      object-fit: cover;
+
+      @media screen and (max-width: $break-m) {
+        height: 25vw;
+      }
+
+      @media screen and (max-width: $break-s) {
+        height: 50vw;
+      }
+    }
   }
 
-  img {
-    background: #c4c4c4;
-    border-radius: 5px;
-    width: 100%;
-    height: 15vw;
-    margin-bottom: 15px;
-    object-fit: cover;
-
-    @media screen and (max-width: $break-m) {
-      height: 25vw;
-    }
-
-    @media screen and (max-width: $break-s) {
-      height: 50vw;
-    }
-  }
   .title {
     font-family: 'Nunito Sans';
     font-size: 1.25rem;
