@@ -67,7 +67,16 @@ function Layout(props: LayoutPropsType) {
         </Link>
       </nav>
       <main>{children}</main>
+
+      <footer>
+        <span>{`© ${new Date().getFullYear()} | Theme by `}</span>
+        <a href="https://github.com/jeonghye-choi">Jeonghye-Choi</a>
+        <span>{` | Built with `}</span>
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+
       <div
+        className="top-button"
         id="top"
         style={{
           opacity: isTop ? '0' : '1',
@@ -78,12 +87,6 @@ function Layout(props: LayoutPropsType) {
         }}>
         <FAIcon icon={faAngleDoubleUp} />
       </div>
-      <footer>
-        <span>{`© ${new Date().getFullYear()} | Theme by `}</span>
-        <a href="https://github.com/jeonghye-choi">Jeonghye-Choi</a>
-        <span>{` | Built with `}</span>
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
     </div>
   );
 }
