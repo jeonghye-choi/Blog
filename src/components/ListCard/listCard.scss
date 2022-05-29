@@ -31,6 +31,16 @@
       text-decoration: underline #55adff;
       color: #55adff;
     }
+    ol,
+    ul {
+      padding-inline-start: 20px;
+
+      li {
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
   .tags {
     font-size: 0.875rem;
