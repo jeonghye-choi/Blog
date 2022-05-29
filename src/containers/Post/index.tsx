@@ -34,12 +34,11 @@ function Post(props: { post: PostType }) {
         <article className="post-body">
           <MDXRenderer>{body}</MDXRenderer>
         </article>
-        <hr />
-        <div>
+        <article className="post-footer">
           {tags?.map((tag, index) => (
-            <span key={index}>{tag}</span>
+            <span key={index}>#{tag}</span>
           ))}
-        </div>
+        </article>
       </section>
     </>
   );
