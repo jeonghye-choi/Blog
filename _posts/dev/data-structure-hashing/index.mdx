@@ -3,10 +3,10 @@ date: '2022-01-20'
 title: '해싱(Hashing)'
 categories: ['CS']
 tags: ['DataStructure', 'Algorithm']
-thumbnail: ./mainImage.jpg
+thumbnail: ./mainImage.png
 ---
 
-## <span class="highlight">Hashing이란</span>
+## Hashing이란
 
 해싱은 associative memory 구조를 가진 자료구조로, 일반적인 폰 노이만 구조이다.
 
@@ -18,12 +18,9 @@ thumbnail: ./mainImage.jpg
   만약 '바나나'를 찾으려고 한다면, '바나나'가 아닌 '바나나'(value)가 있는 주소(address)를 찾아야 한다.
   (폼노이만은 key + value 구조로 되어있다)
 
-<br/>
 
 즉, 해싱은 어떤 데이터를 저장공간에 넣어두고, 각 저장공간을 주소(address)로 접근 해가면서 내용을 비교하는 방식이다.
 (검색, 저장하는 방법과는 완전히 다르다.)
-
-<br/>
 
 ### Associative Memory
 
@@ -52,8 +49,6 @@ thumbnail: ./mainImage.jpg
 
     하지만 요즘은 memory가 문제 되지 않기 때문에, hashing의 사용이 늘어났다.
 
-<br/>
-
 
 ### Hashing의 종류
 
@@ -75,14 +70,14 @@ thumbnail: ./mainImage.jpg
 
   <br/>
   1. Hashing은 function(함수)이다.  hash함수에 X를 넣었을 떄, Z+가 나오도록 매핑하는 것.
-
+  
   2. Memory Map > Bucket > Slot
 
   <br/>
 
   - ex) 학점
 
-    ```cpp
+    ```js{numberLines: true}
     hash_map <string, int> Grade;
     Grade["JY"] = 98;
     hash("JY") = 274; // 주소는 random
@@ -101,25 +96,15 @@ thumbnail: ./mainImage.jpg
 
     ![](slot.jpeg)
 
-    
-      
-    <br/>
-
   - **용어**
 
     '**h(x) = h(y)**' 라면,
-    <br/>
 
     - **Synonym(동거자)** : x,y 는 동거자
 
     - **Collision(충돌)**
 
     - **Overflow(오버플로)**
-
-
-
-  <br/>
-
 
 ### Hashing 예시
 
@@ -137,11 +122,8 @@ thumbnail: ./mainImage.jpg
 
   ![](hash-example-3.jpeg)
 
-  <br/>
 
-
-
-## <span class="highlight">Hashing Function</span>
+## Hashing Function
 
 **Hash Function**은 `h(TITLE) -> z+` 로 매핑해주는 함수
 
@@ -180,8 +162,6 @@ Employees[5678] = "Yeong Q.";
 cout << "Employees[1111]=" << Employees[1111] << endl;
 cout << "Map size: " << Employees.size() << endl;
 ```
-
-<br/>
 
 
 ## Hash에서 중요한 것
