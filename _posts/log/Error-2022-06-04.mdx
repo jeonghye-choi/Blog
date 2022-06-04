@@ -1,0 +1,27 @@
+---
+date: '2022-06-04'
+title: 'Error : remote: This repository moved. Please use the new location'
+tags: ['Error']
+state: 'solve'
+---
+
+- **Problem**
+
+  `git push origin main` 을 하는 데, `remote: This repository moved. Please use the new location`
+  이런 에러가 났다.
+  푸쉬가 잘 되긴 했지만, 메시지가 떴으니 한 번 살펴봤다.
+
+- **Solved**
+
+  알고 보니 깃허브 계정 이름이 바뀌어서 remote 주소가 바뀌었기 때문에 보내준 메시지였다.
+
+  ```bash
+  # 연결된 레파지토리 보는 명령어
+  git remote -v
+
+  # origin으로 연결된 레파지토리 지우기
+  git remote rm origin
+
+  # 새로 연결하기
+  git remote add origin [레파지토리 주소]
+  ```
