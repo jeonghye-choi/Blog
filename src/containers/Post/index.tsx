@@ -1,4 +1,5 @@
 import { PostType } from 'CreatePostPagesQuery';
+import { Disqus } from 'gatsby-plugin-disqus';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as React from 'react';
@@ -6,9 +7,19 @@ import * as React from 'react';
 import './post.scss';
 
 function Post(props: { post: PostType }) {
-  const { body, frontmatter } = props.post;
+  const { id, slug, body, frontmatter } = props.post;
   const { date, title, categories, tags } = frontmatter;
   const thumbnail = getImage(frontmatter.thumbnail);
+
+  const PAGE_URL = `https://jeonghye.blog/${slug}`;
+  const PAGE_IDENTIFIER = id;
+  const PAGE_TITLE = title;
+
+  const disqusConfig = {
+    url: PAGE_URL,
+    identifier: PAGE_IDENTIFIER,
+    title: PAGE_TITLE,
+  };
 
   return (
     <>
@@ -38,6 +49,9 @@ function Post(props: { post: PostType }) {
           {tags?.map((tag, index) => (
             <span key={index}>#{tag}</span>
           ))}
+        </article>
+        <article className="post-comment">
+          <Disqus config={disqusConfig} />
         </article>
       </section>
     </>
