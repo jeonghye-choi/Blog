@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `jeonghye`,
+        shortname: `jeonghye-blog`,
       },
     },
 
