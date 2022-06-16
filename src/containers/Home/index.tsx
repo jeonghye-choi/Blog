@@ -1,8 +1,32 @@
+import ListTable from 'components/ListTable';
 import * as React from 'react';
 
 import './home.scss';
 
 function Home() {
+  const work = [
+    {
+      left: 'Viva Republica (Toss)',
+      center: 'UX Engineer (Assistant)',
+      right: '2022.6.27 - Present',
+    },
+    {
+      left: 'HoneyBees',
+      center: 'FE Developer',
+      right: '2021.6 - Present',
+    },
+    {
+      left: 'ASSI (Readers)',
+      center: 'FE Intern',
+      right: '2020.10',
+    },
+    {
+      left: 'While True (OnAd)',
+      center: 'UI/UX Designer',
+      right: '2019.5.3 - 2019.9.13',
+    },
+  ];
+
   return (
     <article id="home">
       <section className="home-introduction">
@@ -15,28 +39,7 @@ function Home() {
       </section>
       <section className="home-work">
         <h3>I&apos;ve worked at</h3>
-        <ul>
-          <li>
-            <span className="left">Viva Republica (Toss)</span>
-            <span className="center">UX Engineer (Assistant)</span>
-            <span className="right">2022.6.27 - Present</span>
-          </li>
-          <li>
-            <span className="left">HoneyBees</span>
-            <span className="center">FE Developer</span>
-            <span className="right">2021.6 - Present</span>
-          </li>
-          <li>
-            <span className="left">ASSI (Readers)</span>
-            <span className="center">FE Intern</span>
-            <span className="right">2020.10</span>
-          </li>
-          <li>
-            <span className="left">While True (OnAd)</span>
-            <span className="center">UI/UX Designer</span>
-            <span className="right">2019.5.3 - 2019.9.13</span>
-          </li>
-        </ul>
+        <ListTable data={work} />
       </section>
     </article>
   );
