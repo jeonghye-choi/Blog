@@ -21,17 +21,18 @@
   }
 
   section {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
 
   .home-introduction {
     & > p {
       font-family: 'Helvetica Neue';
-      font-weight: 500;
       font-size: 0.875rem;
-      color: #666;
+      letter-spacing: 0.03rem;
+      line-height: 20px;
+      color: #555;
       margin: 0;
-      margin-bottom: 0.825rem;
+      margin-bottom: 1.25rem;
     }
   }
 
