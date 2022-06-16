@@ -1,0 +1,35 @@
+@import 'utils/variables.scss';
+
+#home {
+  color: #333333;
+
+  h2 {
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 34px;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    font-family: 'Nunito Sans';
+    font-size: 1.25rem;
+    line-height: 27px;
+    margin: 0;
+  }
+
+  section {
+    margin-bottom: 7rem;
+  }
+
+  .home-introduction {
+    & > p {
+      font-family: 'Helvetica Neue';
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: #666;
+      margin: 0;
+      margin-bottom: 0.825rem;
+    }
+  }
+
