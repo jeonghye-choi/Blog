@@ -13,7 +13,7 @@ function Home() {
     {
       left: 'HoneyBees',
       center: 'FE Developer',
-      right: '2021.6 - Present',
+      right: '2021.6 - 2022.11',
     },
     {
       left: 'ASSI (Readers)',
