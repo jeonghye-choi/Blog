@@ -8,7 +8,7 @@ function Home() {
     {
       left: 'Viva Republica (Toss)',
       center: 'UX Engineer (Assistant)',
-      right: '2022.6.27 - Present',
+      right: '2022.6.27 - 12.23',
     },
     {
       left: 'HoneyBees',
@@ -43,8 +43,7 @@ function Home() {
           비전공생으로 시작했지만 개발을 더 깊게 이해하고자 정보컴퓨터공학과
           복수전공에 도전했고, 지금은 전공생으로써 탄탄히 컴퓨터 전문 지식을
           쌓아가고 있습니다. 주기적으로 프로젝트나 해커톤에 참여하면서 다양한
-          사람들과 협업하며 성장하는 프런트 개발자입니다. 현재 토스에서 UX
-          Engineer Assistant로 일하고 있습니다.
+          사람들과 협업하며 성장하는 프런트 개발자입니다.
         </p>
       </section>
       <section className="home-work">
