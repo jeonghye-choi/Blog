@@ -1,0 +1,60 @@
+@import 'utils/variables.scss';
+
+.photolistcard {
+  display: flex;
+
+  .photolistcard-left {
+    .gatsby-image-wrapper {
+      width: 130px;
+      height: 130px;
+      margin-right: 15px;
+
+      img {
+        background: #c4c4c4;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 15px;
+        object-fit: cover;
+      }
+    }
+  }
+  .photolistcard-right {
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+
+    .photolistcard-right-tags {
+      display: flex;
+      flex-direction: row;
+      font-family: 'Noto Sans KR';
+      font-weight: 400;
+      font-size: 0.7rem;
+      line-height: 171%;
+
+      .photolistcard-right-tag {
+        margin-right: 8px;
+      }
+    }
+    .photolistcard-right-title {
+      font-family: 'Nunito Sans';
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 27px;
+      color: #333333;
+    }
+    .photolistcard-right-sub-title {
+      font-family: 'Noto Sans KR';
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 20px;
+      color: #999999;
+    }
+    .photolistcard-right-date {
+      font-family: 'Noto Sans KR';
+      font-weight: 400;
+      font-size: 0.7rem;
+      line-height: 171%;
+      color: #555555;
+    }
+  }
+}
