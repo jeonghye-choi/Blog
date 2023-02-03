@@ -1,5 +1,5 @@
 import { PostsEdgeType } from 'CreatePostPagesQuery';
-import PhotoCard from 'components/PhotoCard';
+import PhotoListCard from 'components/PhotoListCard';
 import * as React from 'react';
 import { useMemo } from 'react';
 
@@ -23,7 +23,19 @@ function BookContent(props: BookContentProps) {
     <section className="book-content">
       {filteredPosts.map(
         ({ node: { id, frontmatter, slug } }: PostsEdgeType) => (
-          <PhotoCard key={id} id={id} link={slug} {...frontmatter} />
+          <PhotoListCard
+            key={id}
+            id={id}
+            date={frontmatter.date}
+            title={frontmatter.title}
+            subtitle={frontmatter.subtitle}
+            thumbnail={frontmatter.thumbnail}
+            link={slug}
+            tags={[
+              frontmatter.author ?? '작가미상',
+              frontmatter.publisher ?? '',
+            ]}
+          />
         ),
       )}
     </section>

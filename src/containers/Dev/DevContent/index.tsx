@@ -1,5 +1,5 @@
 import { PostsEdgeType } from 'CreatePostPagesQuery';
-import PhotoCard from 'components/PhotoCard';
+import PhotoListCard from 'components/PhotoListCard';
 import * as React from 'react';
 import { useMemo } from 'react';
 
@@ -37,7 +37,7 @@ function DevContent(props: DevContentProps) {
     <section className="dev-content">
       {filteredPosts.map(
         ({ node: { id, frontmatter, slug } }: PostsEdgeType) => (
-          <PhotoCard key={id} id={id} link={slug} {...frontmatter} />
+          <PhotoListCard key={id} id={id} link={slug} {...frontmatter} />
         ),
       )}
     </section>
