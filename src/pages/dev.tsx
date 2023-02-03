@@ -8,7 +8,7 @@ function DevPage() {
   return (
     <Layout page="Dev">
       <Seo
-        title="정혜의 개발 저장소 | Dev"
+        title="Dev"
         description="배우고 이해한 것들을 정리하는 저장소입니다."
       />
       <Dev />
