@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { throttle } from 'lodash';
 import * as React from 'react';
 import { useCallback, useEffect, useState } from 'react';
+import BookIcon from 'static/image/icons/book-icon-5.svg';
 import GithubIcon from 'static/image/icons/github-icon.svg';
 import InstagramIcon from 'static/image/icons/instagram-icon.svg';
 import LinkedInIcon from 'static/image/icons/linkedIn-icon.svg';
@@ -50,6 +51,9 @@ function Layout(props: LayoutPropsType) {
           <a href="https://www.instagram.com/jihyenanum/">
             <img src={InstagramIcon} />
           </a>
+          <Link to={'/book'}>
+            <img src={BookIcon} />
+          </Link>
           <a href="https://www.notion.so/jeonghyedev/Jeonghye-8d52b0dc4ef046da8886c6b88a3cca86">
             <span>Portfolio</span>
           </a>
