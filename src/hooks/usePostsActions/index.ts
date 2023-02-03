@@ -17,15 +17,23 @@ function usePostsActions() {
                 id
                 slug
                 frontmatter {
-                  title
-                  date(formatString: "YYYY.MM.DD")
-                  tags
+                  author
+                  bookcover {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
                   categories
+                  date(formatString: "YYYY.MM.DD")
+                  publisher
+                  subtitle
+                  tags
                   thumbnail {
                     childImageSharp {
                       gatsbyImageData
                     }
                   }
+                  title
                 }
                 slug
                 body
