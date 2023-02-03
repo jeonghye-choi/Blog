@@ -1,11 +1,15 @@
 declare module 'CreatePostPagesQuery' {
   import { IGatsbyImageData } from 'gatsby-plugin-image';
   export interface PostFrontmatterType {
-    title: string;
     date: string;
-    tags?: string[];
+    title: string;
+    subtitle: string;
+    tags: string[];
     categories?: string[];
     thumbnail: IGatsbyImageData;
+    author?: string;
+    bookcover?: IGatsbyImageData;
+    publisher?: string;
   }
 
   export interface PostType {
