@@ -31,10 +31,7 @@ function BookContent(props: BookContentProps) {
             subtitle={frontmatter.subtitle}
             thumbnail={frontmatter.thumbnail}
             link={slug}
-            tags={[
-              frontmatter.author ?? '작가미상',
-              frontmatter.publisher ?? '',
-            ]}
+            tags={[frontmatter.author ?? '작가미상']}
           />
         ),
       )}
