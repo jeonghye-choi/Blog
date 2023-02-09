@@ -1,0 +1,41 @@
+---
+date: '2023-02-03'
+title: 'Error⎟ERESOLVE unable to resolve dependency tree'
+tags: ['Error']
+state: 'solve'
+---
+
+- **Problem**
+
+  ```bash
+  npm ERR! code ERESOLVE
+  npm ERR! ERESOLVE unable to resolve dependency tree
+  npm ERR! 
+  npm ERR! While resolving: jeonghye-blog@2.0.0
+  npm ERR! Found: gatsby@4.25.4
+  npm ERR! node_modules/gatsby
+  npm ERR!   gatsby@"^4.9.0" from the root project
+  npm ERR! 
+  npm ERR! Could not resolve dependency:
+  npm ERR! peer gatsby@"^5.0.0" from gatsby-plugin-robots-txt@1.8.0
+  npm ERR! node_modules/gatsby-plugin-robots-txt
+  npm ERR!   gatsby-plugin-robots-txt@"^1.7.1" from the root project
+  npm ERR! 
+  npm ERR! Fix the upstream dependency conflict, or retry
+  npm ERR! this command with --force or --legacy-peer-deps
+  npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+  npm ERR! 
+  npm ERR! 
+  npm ERR! For a full report see:
+  npm ERR! /Users/choijeonghye/.npm/_logs/2023-02-03T07_34_22_663Z-eresolve-report.txt
+
+  npm ERR! A complete log of this run can be found in:
+  npm ERR!     /Users/choijeonghye/.npm/_logs/2023-02-03T07_34_22_663Z-debug-0.log
+  ```
+
+- **Solved**
+
+  ```bash
+  $ npm install --legacy-peer-deps
+  ```
+
