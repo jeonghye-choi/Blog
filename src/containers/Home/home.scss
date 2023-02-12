@@ -35,41 +35,4 @@
       margin-bottom: 1.25rem;
     }
   }
-
-  .home-work {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: grid;
-        grid-template-columns: 1fr 1fr 120px;
-        column-gap: 1rem;
-        align-items: center;
-        padding: 15px 0;
-        border-bottom: 1px solid #ededed;
-
-        .left {
-          font-weight: 500;
-          line-height: 17px;
-          font-size: 0.875rem;
-          color: #555;
-          justify-self: start;
-        }
-        .center {
-          line-height: 17px;
-          font-size: 0.813rem;
-          color: #555;
-          justify-self: start;
-        }
-        .right {
-          line-height: 15px;
-          font-size: 0.75rem;
-          color: #555;
-          justify-self: end;
-        }
-      }
-    }
-  }
 }
