@@ -2,30 +2,19 @@ import * as React from 'react';
 
 import './listTable.scss';
 
-interface ListTableElement {
-  left: string;
-  center: string;
-  right: string;
+function ListTable({ children }: { children: React.ReactNode }) {
+  return <ul className="list-table">{children}</ul>;
 }
 
-interface ListTableProps {
-  data: ListTableElement[];
-}
-
-function ListTable(props: ListTableProps) {
-  const data = props.data;
-
-  return (
-    <ul className="listtable">
-      {data.map((element, index) => (
-        <li key={index}>
-          <span className="left">{element.left}</span>
-          <span className="center">{element.center}</span>
-          <span className="right">{element.right}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
+// eslint-disable-next-line react/display-name
+ListTable.Li = function ({
+  column = 3,
+  children,
+}: {
+  column?: number;
+  children: React.ReactNode;
+}) {
+  return <li className={`li-${column}`}>{children}</li>;
+};
 
 export default ListTable;
