@@ -1,0 +1,43 @@
+@import 'utils/variables.scss';
+
+.list-row {
+  .title {
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    line-height: 20px;
+    color: #333333;
+    padding: 15px 0;
+    margin-top: 5px;
+    border-bottom: 1px solid #ededed;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-family: 'Helvetica Neue';
+      font-weight: 500;
+      font-size: 0.8rem;
+      line-height: 15px;
+      color: #555555;
+      padding-top: 15px;
+
+      span:nth-child(2) {
+        font-weight: 400;
+      }
+
+      span:first-child:after {
+        content: '|';
+        margin: 0 10px;
+      }
+    }
+
+    li::before {
+      content: '•';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
